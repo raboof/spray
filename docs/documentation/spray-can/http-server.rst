@@ -220,7 +220,7 @@ When a *spray-can* connection actor receives an HTTP request it tries to parse a
 *spray-http* model classes. No matter whether this succeeds or not, the connection actor will always pass on all
 received headers to the application. Unknown headers as well as ones with invalid syntax (according to *spray*'s header
 parser) will be made available as ``RawHeader`` instances. For the ones exhibiting parsing errors a warning message is
-logged depending on the value of the ``illegal-header-warnings`` config setting.
+logged depending on the value of the ``spray.can.server.parsing.illegal-header-warnings`` config setting.
 
 When sending out responses the connection actor watches for a ``Connection`` header set by the application and acts
 accordingly, i.e. you can force the connection actor to close the connection after having sent the response by including

@@ -80,7 +80,7 @@ When a *spray-can* connection actor receives an HTTP response it tries to parse 
 *spray-http* model classes. No matter whether this succeeds or not, the connection actor will always pass on all
 received headers to the application. Unknown headers as well as ones with invalid syntax (according to *spray*'s header
 parser) will be made available as ``RawHeader`` instances. For the ones exhibiting parsing errors a warning message is
-logged depending on the value of the ``illegal-header-warnings`` config setting.
+logged depending on the value of the ``spray.can.client.parsing.illegal-header-warnings`` config setting.
 
 The following message headers are managed by the *spray-can* layer itself and as such are **ignored** if you "manually"
 add them to an outgoing request:
